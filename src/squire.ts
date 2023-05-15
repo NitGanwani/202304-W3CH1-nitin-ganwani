@@ -1,8 +1,17 @@
-import { Character } from './characters.js';
+/* eslint-disable max-params */
+import { Character } from './character';
 
 export class Squire extends Character {
-  constructor(name, house, age, status, speech, served, flattery) {
-    super(name, house, age, status, speech);
+  served;
+  flattery;
+  constructor(
+    name: string,
+    house: string,
+    age: number,
+    served: string,
+    flattery: number
+  ) {
+    super(name, house, age);
     this.served = served;
     this.flattery = flattery;
     this.speech = 'Soy un loser';

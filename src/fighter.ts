@@ -1,8 +1,17 @@
-import { Character } from './characters.js';
+/* eslint-disable max-params */
+import { Character } from './character';
 
 export class Fighter extends Character {
-  constructor(name, house, age, status, speech, weapon, skill) {
-    super(name, house, age, status, speech);
+  weapon;
+  skill;
+  constructor(
+    name: string,
+    house: string,
+    age: number,
+    weapon: string,
+    skill: number
+  ) {
+    super(name, house, age);
     this.weapon = weapon;
     this.skill = skill;
     this.speech = 'Primero pego y luego pregunto';
